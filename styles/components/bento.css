@@ -1,6 +1,6 @@
 /* Bento Grid */
 .bento-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 
 .section-title {
@@ -19,7 +19,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(4, minmax(200px, auto));
     gap: 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .bento-item {
@@ -70,6 +70,7 @@
 .bento-description {
     color: var(--text-secondary);
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 /* Skills Grid */
