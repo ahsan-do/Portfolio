@@ -1,10 +1,10 @@
 /* Bento Grid */
 .bento-section {
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     text-align: center;
     margin-bottom: 3rem;
@@ -17,7 +17,7 @@
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(4, minmax(200px, auto));
+    grid-auto-rows: minmax(200px, auto);
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
@@ -143,4 +143,118 @@
     background: var(--primary);
     color: white;
     transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .bento-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Tablet and below */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+    
+    .bento-item.large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .bento-item.wide {
+        grid-column: span 2;
+    }
+    
+    .bento-item.tall {
+        grid-row: span 1;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .bento-section {
+        padding: 3rem 0;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Reset all grid spans to single column on mobile */
+    .bento-item.large,
+    .bento-item.wide,
+    .bento-item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .bento-item {
+        padding: 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+    
+    .skill-item {
+        padding: 0.75rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .project-link {
+        text-align: center;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 576px) {
+    .bento-section {
+        padding: 2rem 0;
+    }
+    
+    .bento-item {
+        padding: 1.25rem;
+    }
+    
+    .bento-icon {
+        font-size: 2rem;
+    }
+    
+    .bento-title {
+        font-size: 1.25rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .project-image {
+        height: 150px;
+        font-size: 2.5rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+    .bento-grid {
+        gap: 0.75rem;
+    }
+    
+    .bento-item {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        margin-bottom: 2rem;
+    }
 }

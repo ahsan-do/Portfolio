@@ -26,7 +26,14 @@
         <div class="container">
             <div class="nav-content">
                 <a href="#home" class="nav-brand">ahsan.dev</a>
-                <ul class="nav-links">
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <ul class="nav-links" id="navlinks">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
@@ -366,7 +373,8 @@
     </footer>
 
     <!-- JavaScript Files -->
-    <script src="scripts/theme.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="scripts/theme.js"></script>
+    <script src="scripts/navigationToggle.js"></script>
     <script src="scripts/animations.js"></script>
     <script src="scripts/form-handler.js"></script>
     <script src="scripts/main.js"></script>

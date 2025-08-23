@@ -38,6 +38,7 @@
 .form-textarea {
     resize: vertical;
     min-height: 120px;
+    font-family: 'Inter',sans-serif;
 }
 
 /* Enhanced Contact Styles */
