@@ -102,6 +102,9 @@
     display: block;
 }
 
+/* Ensure image-based skill icons match size/alignment and theme behavior */
+/* (Removed TS image overrides; back to Font Awesome icon) */
+
 /* Projects */
 .project-card {
     position: relative;
